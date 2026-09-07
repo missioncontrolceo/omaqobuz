@@ -1,5 +1,9 @@
 # Omaqobuz
 
+<p align="center">
+  <img src="preview.png" alt="Omaqobuz now-playing card in the Omarchy bar" width="640">
+</p>
+
 Now playing from the [Qobuz](https://www.qobuz.com/) desktop app (QBZ), in the
 Omarchy bar: album art, track and artist, a progress bar, and playback controls.
 

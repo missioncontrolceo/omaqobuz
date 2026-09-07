@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "missioncontrolceo.omaqobuz",
+  "name": "Omaqobuz",
+  "version": "1.0.0",
+  "author": "Eddie Vassallo",
+  "license": "MIT",
+  "homepage": "https://github.com/missioncontrolceo/omaqobuz",
+  "description": "Now playing from the Qobuz desktop app (QBZ), with album artwork and playback controls in the Omarchy bar.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Omaqobuz",
+    "description": "QBZ now-playing with album art, play/pause and skip.",
+    "category": "Media",
+    "defaultSection": "right",
+    "allowMultiple": false,
+    "defaults": {
+      "showArt": true,
+      "showLabel": true,
+      "scrollLabel": true,
+      "showSkipButtons": false,
+      "maxLabelWidth": 180
+    },
+    "schema": [
+      { "key": "showArt", "type": "bool", "label": "Show album art in the bar" },
+      { "key": "showLabel", "type": "bool", "label": "Show track info in the bar" },
+      { "key": "scrollLabel", "type": "bool", "label": "Scroll track info that doesn't fit" },
+      { "key": "showSkipButtons", "type": "bool", "label": "Show previous/next buttons in the bar" },
+      { "key": "maxLabelWidth", "type": "int", "label": "Max track info width (px)" }
+    ]
+  }
+}

@@ -22,6 +22,16 @@ omarchy plugin enable missioncontrolceo.omaqobuz --section right
 
 Review the code first — Omarchy plugins run unsandboxed inside `omarchy-shell`.
 
+## Remove
+
+```bash
+omarchy plugin remove missioncontrolceo.omaqobuz
+```
+
+That drops the widget from the bar layout and deletes the plugin directory
+(keeping a timestamped backup alongside it). Nothing else on the system is
+touched, so removal leaves no configuration behind.
+
 ## Using it
 
 In the bar the widget shows the cover thumbnail, a play/pause glyph, and the
@@ -54,11 +64,15 @@ Every toggle is written back to the widget's entry in
 { "id": "missioncontrolceo.omaqobuz", "maxLabelWidth": 260 }
 ```
 
-## Notes
+## What it touches
 
-The widget reads MPRIS through `Quickshell.Services.Mpris` — no polling of the
-Qobuz app, and no network access of its own beyond loading the cover image URL
-that QBZ publishes.
+The only file it writes is `~/.config/omarchy/shell.json`, and only its own bar
+entry, only when you flip one of its preference toggles. It never edits another
+widget's settings, and it runs no external commands.
+
+It reads MPRIS through `Quickshell.Services.Mpris` — no polling of the Qobuz
+app, and no network access of its own beyond loading the cover image URL that
+QBZ publishes.
 
 ## License
 
